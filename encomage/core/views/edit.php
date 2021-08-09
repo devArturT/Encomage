@@ -1,0 +1,30 @@
+
+<div class="container">
+    <h1>Edit user</h1>
+    <form action="update" method="post">
+        <div class="mb-3 row">
+            <label for="inputFirstName" class="col-sm-2 col-form-label">First name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputFirstName" name="inputFirstName" placeholder="Ivan" value="<?= $user->first_name ?>">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="inputLastName" class="col-sm-2 col-form-label">Last name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputLastName" name="inputLastName" placeholder="Ivanov" value="<?= $user->last_name ?>">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+                <input type="mail" class="form-control" id="inputEmail" name="inputEmail" placeholder="email@example.com" value="<?= $user->email ?>">
+            </div>
+        </div>
+        <input type="hidden" name="id" value="<?= $user->id ?>">
+        <div class="mb-3 row">
+            <div class="col-12">    
+                <button class="btn btn-primary" type="submit">Save</button>
+            </div>
+        </div>
+    </form>
+</div>
